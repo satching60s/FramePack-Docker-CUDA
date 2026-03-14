@@ -12,7 +12,7 @@ services:
     image: framepack-torch26-cu124:latest
     container_name: framepack
     ports:
-      - "7860:7860"
+      - "7861:7860"
     volumes:
       - framepack_models:/app/hf_download
       - ./outputs:/app/outputs
@@ -26,9 +26,11 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    restart: unless-stopped
+    restart: "no"
     stdin_open: true
     tty: true
+    entrypoint: ["python"]
+    command: ["demo_gradio.py", "--server", "0.0.0.0"]
 
 volumes:
   framepack_models:
