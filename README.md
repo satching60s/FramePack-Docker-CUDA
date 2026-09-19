@@ -1,5 +1,12 @@
 ## FramePack Docker CUDA
 
+## Redmine連携
+
+- プロジェクト: [framepack-on-docker](http://192.168.0.150:3000/projects/framepack-on-docker)
+- 識別子: `framepack-on-docker`
+- 関連チケット・作業内容は、日本語Markdownで記載します。構成・依存関係・状態遷移を図示すると有用な場合はMermaidを使用します。
+- GitHubのIssue・PRではこの識別子を明記し、変更内容・影響範囲・検証結果を記載します。マージ後はRedmineの関連チケットを更新します。
+
 ### Quick Start with Docker Compose (Recommended)
 
 ```bash
